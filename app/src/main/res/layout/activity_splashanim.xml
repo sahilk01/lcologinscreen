@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rlsplash"
+    android:layout_height="match_parent"
+    tools:context=".splashanim">
+
+    <com.flaviofaria.kenburnsview.KenBurnsView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/loginback" />
+
+    <ImageView
+        android:id="@+id/lg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:paddingTop="50dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/lcolight" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="center"
+    android:id="@+id/anim"
+    android:layout_centerInParent="true">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/code"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/colorAccent"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        app:lottie_fileName="coding.json"/>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="250dp"
+    android:layout_marginTop="20dp"
+    android:layout_height="50dp"
+    android:layout_centerInParent="true"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_below="@id/anim">
+
+    <Button
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/btnbkg"
+        android:fontFamily="@font/varela"
+        android:text="login"
+        android:onClick="loginb"
+        android:layout_marginRight="10dp"
+        android:textColor="@drawable/txcolor"
+        android:textSize="18sp"/>
+    <Button
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/btnbkg"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/varela"
+        android:onClick="sgb"
+        android:text="sign up"
+        android:textColor="@drawable/txcolor"
+        android:textSize="18sp" />
+
+</LinearLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:text="Made in India with"
+            android:layout_marginLeft="30dp"
+            android:gravity="bottom|end"
+            android:fontFamily="@font/varela"
+            android:textSize="20sp"/>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_weight="0.5"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@color/white"
+            app:lottie_repeatCount="1"
+            android:paddingTop="20dp"
+            android:paddingLeft="-20dp"
+            android:paddingRight="20dp"
+            android:layout_gravity="left|center"
+            app:lottie_fileName="heart.json"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
